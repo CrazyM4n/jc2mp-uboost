@@ -108,14 +108,14 @@ function RenderEvent()
 	Render:DrawText( boost_pos, boost_text, Color( 255, 255, 255 ) )
 end
 function ModulesLoad()
-	Events:FireRegisteredEvent( "HelpAddItem",
+	Events:Fire( "HelpAddItem",
         {
             name = "Boost Upgraded",
             text = 
                 "The boost lets you increase the speed of your car/boat.\n\nTo use it, tap Shift.\n\nTo change boost, type /boost [multiplier] (default is 10)\n\nTo disable the script, type /boost 0." } )
 end
 function ModuleUnload()
-    Events:FireRegisteredEvent( "HelpRemoveItem",
+    Events:Fire( "HelpRemoveItem",
         {
             name = "Upgraded Boost"
         } )
